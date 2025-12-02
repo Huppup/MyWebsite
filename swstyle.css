@@ -1,0 +1,25 @@
+/* body { */
+/*     background: #222266; */
+/* } */
+#background {
+    background-image: url("img/bubblyback.png");
+}
+#light {
+    background-image: radial-gradient(rgba(150,220,255,1),rgba(150,220,255,1),rgba(150,220,255,1),rgba(150,220,255,1),
+    rgba(150,220,255,1),rgba(150,220,255,1),
+    rgba(0,0,0,0),rgba(0,0,0,0),
+    rgba(0,0,0,0),rgba(0,0,0,0)
+    );
+}
+#eye {
+    border-radius: 50px 0px 0px 50px;
+    background-image: radial-gradient(rgba(0,0,0,0), rgba(0,0,0,0),rgba(150,220,255,0.5),rgba(215,63,68,0));
+}
+#item1,
+#item2,
+#item3,
+#item4,
+#item5,
+#item {
+    border: rgba(150,220,255,1) 4px solid; 
+}
