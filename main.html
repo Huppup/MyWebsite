@@ -12,24 +12,88 @@
 
     
     <nav id="sidebar_left">
-        
+        <div class="section_button home_page"
+               onclick="document.getElementById('item1').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})">
+            <i class="fa-solid fa-face-smile"></i>
+        </div>
+
+        <div class="section_button home_page"
+               onclick="document.getElementById('item2').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})">
+            <i class="fa-solid fa-circle-info"></i>
+        </div>
+
+        <div class="section_button home_page"
+               onclick="document.getElementById('item3').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})">
+            <i class="fa-solid fa-microchip" ></i>
+        </div>
+
+        <div class="section_button home_page"
+               onclick="document.getElementById('item4').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})">
+            <i class="fa-solid fa-file-lines" ></i>
+        </div>
     </nav>
 
-    <!-- <nav id="sidebar_right"> -->
-    <!---->
-    <!-- </nav> -->
+    <nav id="sidebar_right">
+        <a id="home_button" class="section_button home_page"
+               href="main.html">
+            <i class="fa-solid fa-house" ></i>
+        </a>
+        <a id="swim_button" class="section_button home_page"
+               href="swim.html">
+            <i class="fa-solid fa-person-swimming" ></i>
+        </a>
+    </nav>
 
     <body class="home_page">
-        <div class="item home_page">
+
+
+        <div id="item1" class="item home_page">
             <img class="image home_page" src="img/michael.png" alt="Michael Philipov">
             <span><h1 class="title text home_page">About Me</h1>
-                <p class="text">Hi, I am a High School senior passionate about Computer Science and Engineering. On this website, you can find out everything about me. From my projects to my swimming career, you can find it all.</p></span>
+                <p class="text">Hi, I am a High School senior passionate about Computer Science and Engineering. On this website, you can find out everything about me. From my projects to my swimming career, you can find it all.</p>
+            </span>
         </div>
+
+
+
+        <div id="item2" class="item home_page">
+            <span>
+                <h1 class="title text home_page right_align">Info</h1>
+                <p class="text right_align">I know this website can look a little confusing, but don't worry, I'm on your side! It's time to shine some light on your questions.</p>
+                <h1 class="title text home_page right_align" onclick="toggle_mode()">Theme</h1>
+                <p class="text right_align">The white button in the top right changes theme. Click it to go to light theme, again for dark.</p>
+                <h1 class="title text home_page right_align">Sections</h1>
+                <p class="text right_align">The buttons (icons) on the left change sections, while the buttons on the right change pages. You're ready to use the website!</p>
+            </span>
+            <img class="image home_page" src="img/info_website.gif" alt="Webpage">
+        </div>
+
+        <div id="item3" class="item home_page">
+            <img class="image home_page" src="img/computer.png" alt="Michael Philipov">
+            <span>
+                <h1 class="title text home_page">Tech Stack</h1>
+                <p class="text">An overview of my technical skills, displayed via icons.</p>
+                <h1 class="title text home_page">Computer Science</h1>
+                <h1 class="title text home_page">Engineering</h1>
+            </span>
+        </div>
+
+        <div id="item4" class="item home_page">
+            <a href="docs/Michael_Philipov_Resume.pdf" target="_blank">
+            <img class="image home_page" src="img/Michael_Philipov_Resume.png" alt="Resume">
+            </a>
+            <span><h1 class="title text home_page"><a href="docs/Michael_Philipov_Resume.pdf" target="_blank">Resume</a></h1>
+                <p class="text">This is my one-page resume, summarizing what you need to know about me quick and concise. Need more? Feel free to explore the website. Click the "Resume" button to open it.</p>
+            </span>
+        </div>
+
+
     </body>
 
 
 
-
-    <div id="eye"></div>
+    <div id="theme" class="home_page" onclick="toggle_mode()"><i class="fa-solid fa-circle-half-stroke"></i></div>
+    <div id="tblock"></div>
+    <div id="eye" class="home_page"></div>
     <script src="script.js"></script>
 </html>

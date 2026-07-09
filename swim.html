@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Swimming</title>
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Iceberg&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/2dfce15e6b.js" crossorigin="anonymous"></script>
+    </head> 
+
+    
+    <nav id="sidebar_left">
+        <div class="section_button swim_page"
+               onclick="document.getElementById('item1').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})">
+            <i class="fa-solid fa-face-smile"></i>
+        </div>
+
+        <div class="section_button swim_page"
+               onclick="document.getElementById('item2').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})">
+            <i class="fa-solid fa-circle-info"></i>
+        </div>
+
+        <div class="section_button swim_page"
+               onclick="document.getElementById('item3').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})">
+            <i class="fa-solid fa-file-lines" ></i>
+        </div>
+    </nav>
+
+    <nav id="sidebar_right">
+        <a id="home_button" class="section_button home_page"
+               href="main.html">
+            <i class="fa-solid fa-house" ></i>
+        </a>
+        <a id="swim_button" class="section_button home_page"
+               href="swim.html">
+            <i class="fa-solid fa-person-swimming" ></i>
+        </a>
+    </nav>
+
+    <body class="swim_page">
+        <div id="item1" class="item swim_page">
+            <img class="image swim_page" src="img/michael.png" alt="Michael Philipov">
+            <span><h1 class="title text swim_page">About Me</h1>
+                <p class="text">Hi, I am a High School senior passionate about Computer Science and Engineering. On this website, you can find out everything about me. From my projects to my swimming career, you can find it all.</p>
+            </span>
+        </div>
+        <div id="item2" class="item swim_page">
+            <img class="image swim_page" src="img/michael.png" alt="Michael Philipov">
+            <span><h1 class="title text swim_page">About Me</h1>
+                <p class="text">Hi, I am a High School senior passionate about Computer Science and Engineering. On this website, you can find out everything about me. From my projects to my swimming career, you can find it all.</p>
+            </span>
+        </div>
+        <div id="item3" class="item swim_page">
+            <span><h1 class="title text swim_page right_align">Resume</h1>
+                <p class="text right_align">This is my one-page resume, outlining everything you need to know about me quick and concise. Need more? Feel free to explore the website.</p>
+            </span>
+            <img class="image swim_page" src="img/Michael_Philipov_Resume.png" alt="Resume">
+        </div>
+    </body>
+
+
+
+    <div id="theme" class="swim_page" onclick="toggle_mode()"><i class="fa-solid fa-circle-half-stroke"></i></div>
+    <div id="eye" class="swim_page"></div>
+    <script src="script.js"></script>
+</html>
