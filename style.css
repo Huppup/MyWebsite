@@ -4,7 +4,9 @@
     --background-color: #1f181a;
     --text-color: #cfcfbf;
     --home-color: #fff883;
-    --swim-color: #88aabb;
+    --swim-color: #5588bb;
+    --project-color: #ee5555;
+    --hobby-color: #55aa33;
     
     font-family: "Iceberg", sans-serif;
     font-weight: 400;
@@ -36,9 +38,9 @@ body {
     /* top: 50%; */
     left: 0;
     top: 0;
-    transition: left 2s ease;
+    transition: left 1s ease;
     visibility: visible;
-    z-index: 9999;
+    z-index: 99999;
 }
 #eye {
     pointer-events: none;
@@ -48,6 +50,7 @@ body {
     border-radius: 10px;
     transform: translate(-50%, -50%);
     will-change: transform;
+    z-index: 9999;
 }
 #eye.home_page {
     background-image: radial-gradient(var(--home-color),rgba(0,0,0,0));
@@ -56,6 +59,14 @@ body {
 #eye.swim_page {
     background-image: radial-gradient(var(--swim-color),rgba(0,0,0,0));
     box-shadow: 0px 0px 15px var(--swim-color);
+}
+#eye.project_page {
+    background-image: radial-gradient(var(--project-color),rgba(0,0,0,0));
+    box-shadow: 0px 0px 15px var(--project-color);
+}
+#eye.hobby_page {
+    background-image: radial-gradient(var(--hobby-color),rgba(0,0,0,0));
+    box-shadow: 0px 0px 15px var(--hobby-color);
 }
 #sidebar_left {
     height: auto;
@@ -72,7 +83,7 @@ body {
     align-items: center;
     top: 50%;
     transform: translate(0,-60%);
-    grid-auto-rows: 6vh;
+    grid-auto-rows: 8vh;
     transition: 1s;
 }
 #sidebar_right {
@@ -90,7 +101,7 @@ body {
     align-items: center;
     top: 50%;
     transform: translate(0%,-60%);
-    grid-auto-rows: 6vh;
+    grid-auto-rows: 8vh;
     transition: 1s;
 }
 .item {
@@ -113,6 +124,12 @@ body {
 .item.swim_page:hover {
     box-shadow: 0px 0px 20px var(--swim-color);
 }
+.item.project_page:hover {
+    box-shadow: 0px 0px 20px var(--project-color);
+}
+.item.hobby_page:hover {
+    box-shadow: 0px 0px 20px var(--hobby-color);
+}
 .image {
     border-radius: 20px;
     margin: 20px;
@@ -128,6 +145,12 @@ body {
 }
 .image.swim_page:hover {
     box-shadow: 0 0 15px var(--swim-color);
+}
+.image.project_page:hover {
+    box-shadow: 0 0 15px var(--project-color);
+}
+.image.hobby_page:hover {
+    box-shadow: 0 0 15px var(--hobby-color);
 }
 .text {
     /* justify-self: center; */
@@ -164,6 +187,18 @@ body {
 .title.swim_page:hover {
     box-shadow: 0px 0px 15px var(--swim-color);
 }
+.title.project_page {
+    background-color: var(--project-color);
+}
+.title.project_page:hover {
+    box-shadow: 0px 0px 15px var(--project-color);
+}
+.title.hobby_page {
+    background-color: var(--hobby-color);
+}
+.title.hobby_page:hover {
+    box-shadow: 0px 0px 15px var(--hobby-color);
+}
 span {
     display: grid;
     margin: 0;
@@ -187,6 +222,12 @@ span {
 #theme.swim_page:hover {
     box-shadow: 0px 0px 15px var(--swim-color);
 }
+#theme.project_page:hover {
+    box-shadow: 0px 0px 15px var(--project-color);
+}
+#theme.hobby_page:hover {
+    box-shadow: 0px 0px 15px var(--hobby-color);
+}
 .section_button {
     width: 40px;
     height: 40px;
@@ -199,15 +240,35 @@ span {
 }
 .section_button.home_page:hover {
     box-shadow: 0px 0px 15px var(--home-color);
+    z-index: 1000;
 }
 .section_button.swim_page:hover {
     box-shadow: 0px 0px 15px var(--swim-color);
+    z-index: 1000;
 }
-#swim_button:hover {
-    box-shadow: 0px 0px 15px var(--swim-color);
+.section_button.project_page:hover {
+    box-shadow: 0px 0px 15px var(--project-color);
+    z-index: 1000;
+}
+.section_button.hobby_page:hover {
+    box-shadow: 0px 0px 15px var(--hobby-color);
+    z-index: 1000;
 }
 #home_button:hover {
     box-shadow: 0px 0px 15px var(--home-color);
+    z-index: 1000;
+}
+#swim_button:hover {
+    box-shadow: 0px 0px 15px var(--swim-color);
+    z-index: 1000;
+}
+#project_button:hover {
+    box-shadow: 0px 0px 15px var(--project-color);
+    z-index: 1000;
+}
+#hobby_button:hover {
+    box-shadow: 0px 0px 15px var(--hobby-color);
+    z-index: 1000;
 }
 .right_align {
     justify-self: end;
@@ -220,6 +281,10 @@ a {
     margin: 0;
     padding: 0;
 
+}
+.tech_stack {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 /* #subject { */
 /*     position: fixed; */
