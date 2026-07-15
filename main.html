@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Iceberg&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Iceberg&family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/2dfce15e6b.js" crossorigin="anonymous"></script>
     </head> 
 
@@ -16,37 +17,45 @@
                onclick="document.getElementById('item1').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})">
             <i class="fa-solid fa-face-smile"></i>
         </div>
+        <p class="section_text">About Me</p>
 
         <div class="section_button home_page"
                onclick="document.getElementById('item2').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})">
             <i class="fa-solid fa-circle-info"></i>
         </div>
+        <p class="section_text">Website Info</p>
 
         <div class="section_button home_page"
                onclick="document.getElementById('item3').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})">
             <i class="fa-solid fa-microchip" ></i>
         </div>
+        <p class="section_text">Tech Stack</p>
 
         <div class="section_button home_page"
                onclick="document.getElementById('item4').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})">
             <i class="fa-solid fa-file-lines" ></i>
         </div>
+        <p class="section_text">Resume</p>
     </nav>
 
     <nav id="sidebar_right">
-        <a id="home_button" class="section_button home_page"
+        <p class="section_text right">Home</p>
+        <a id="home_button" class="section_button home_page right"
                href="main.html">
             <i class="fa-solid fa-house" ></i>
         </a>
-        <a id="swim_button" class="section_button home_page"
+        <p class="section_text right">Swimming</p>
+        <a id="swim_button" class="section_button swim_page right"
                href="swim.html">
             <i class="fa-solid fa-person-swimming" ></i>
         </a>
-        <a id="project_button" class="section_button project_page"
+        <p class="section_text right">Projects</p>
+        <a id="project_button" class="section_button project_page right"
                href="projects.html">
             <i class="fa-solid fa-code-fork" ></i>
         </a>
-        <a id="hobby_button" class="section_button project_page"
+        <p class="section_text right">Hobbies</p>
+        <a id="hobby_button" class="section_button project_page right"
                href="hobby.html">
             <i class="fa-solid fa-gamepad" ></i>
         </a>
@@ -121,7 +130,16 @@
 
     <div id="theme" class="home_page" onclick="toggle_mode()"><i class="fa-solid fa-circle-half-stroke"></i></div>
 
-    <div id="tblock"></div>
+    <div id="search" class="home_page" onmouseenter="text_show()" onmouseleave="text_hide()" onclick="search_pop()"><i class="fa-solid fa-magnifying-glass"></i></div>
+    <div id="tblock">
+        <div id="emblem">M</div>
+    </div>
     <div id="eye" class="home_page"></div>
+    <div id="search_pop">
+        <h1 class="title home_page">Search</h1>
+        <input  type="text" placeholder="Search...">
+    </div>
+    <div id="pop_fade" onclick="search_close()"></div>
+
     <script src="script.js"></script>
 </html>

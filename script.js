@@ -8,25 +8,56 @@ function toggle_mode() {
     if (sessionStorage.getItem("theme") === "light") {
         //dark mode
         document.documentElement.style.setProperty('--background-color', '#1f181a');
-        document.documentElement.style.setProperty('--text-color','#cfcfbf');
+        document.documentElement.style.setProperty('--text-color','#fbfcf4');
         sessionStorage.setItem("theme", "dark");
     } else {
         //light mode
-        document.documentElement.style.setProperty('--background-color', '#cfcfbf');
+        document.documentElement.style.setProperty('--background-color', '#fbfcf4');
         document.documentElement.style.setProperty('--text-color','#1f181a');
         sessionStorage.setItem("theme", "light");
     }
 }
-
+async function text_show() {
+    const sections = document.querySelectorAll('.section_text');
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    for (const section of sections) {
+        section.style.opacity = "1";
+        await sleep(100);
+    }
+}
+async function text_hide() {
+    const sections = document.querySelectorAll('.section_text');
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    for (const section of sections) {
+        section.style.opacity = "0";
+        await sleep(100);
+    }
+}
+function search_pop() {
+    const searchpop = document.getElementById("search_pop");
+    const popfade = document.getElementById("pop_fade");
+    popfade.style.visibility="visible";
+    popfade.style.opacity="1";
+    searchpop.style.visibility="visible"
+    searchpop.style.top="50%"
+}
+function search_close() {
+    const searchpop = document.getElementById("search_pop");
+    const popfade = document.getElementById("pop_fade");
+    popfade.style.opacity="0";
+    popfade.style.visibility="hidden";
+    searchpop.style.top="-100vh"
+    searchpop.style.visibility="hidden"
+}
 document.addEventListener('DOMContentLoaded', () => {
     //Keep the theme the same
     if (sessionStorage.getItem("theme") === "dark") {
         //dark mode
         document.documentElement.style.setProperty('--background-color', '#1f181a');
-        document.documentElement.style.setProperty('--text-color','#cfcfbf');
+        document.documentElement.style.setProperty('--text-color','#fbfcf4');
     } else if (sessionStorage.getItem("theme") === "light") {
         //light mode
-        document.documentElement.style.setProperty('--background-color', '#cfcfbf');
+        document.documentElement.style.setProperty('--background-color', '#fbfcf4');
         document.documentElement.style.setProperty('--text-color','#1f181a');
     } else {
         sessionStorage.setItem("theme", "dark");

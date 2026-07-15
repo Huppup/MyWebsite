@@ -34,19 +34,23 @@
     </nav>
 
     <nav id="sidebar_right">
-        <a id="home_button" class="section_button project_page"
+        <p class="section_text right">Home</p>
+        <a id="home_button" class="section_button home_page right"
                href="main.html">
             <i class="fa-solid fa-house" ></i>
         </a>
-        <a id="swim_button" class="section_button project_page"
+        <p class="section_text right">Swimming</p>
+        <a id="swim_button" class="section_button swim_page right"
                href="swim.html">
             <i class="fa-solid fa-person-swimming" ></i>
         </a>
-        <a id="project_button" class="section_button project_page"
+        <p class="section_text right">Projects</p>
+        <a id="project_button" class="section_button project_page right"
                href="projects.html">
             <i class="fa-solid fa-code-fork" ></i>
         </a>
-        <a id="hobby_button" class="section_button project_page"
+        <p class="section_text right">Hobbies</p>
+        <a id="hobby_button" class="section_button project_page right"
                href="hobby.html">
             <i class="fa-solid fa-gamepad" ></i>
         </a>
@@ -102,6 +106,7 @@
 
     <div id="theme" class="project_page" onclick="toggle_mode()"><i class="fa-solid fa-circle-half-stroke"></i></div>
 
+    <div id="search" class="project_page" onmouseenter="text_show()" onmouseleave="text_hide()"><i class="fa-solid fa-magnifying-glass"></i></div>
     <div id="tblock"></div>
     <div id="eye" class="project_page"></div>
     <script src="script.js"></script>
