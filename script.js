@@ -49,6 +49,43 @@ function search_close() {
     searchpop.style.top="-100vh"
     searchpop.style.visibility="hidden"
 }
+async function search_show() {
+    const items = document.querySelectorAll('.search_item');
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    for (const item of items) {
+        item.style.visibility = "visible";
+        item.style.opacity = "1";
+        await sleep(100);
+    }
+}
+async function search_hide() {
+    const items = document.querySelectorAll('.search_item');
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    for (const item of items) {
+        item.style.opacity = "0";
+        await sleep(100);
+    }
+    for (const item of items) {
+        item.style.visibility = "hidden";
+    }
+}
+async function search() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('search_input');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("search_list");
+    li = ul.getElementsByTagName('li');
+
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
 document.addEventListener('DOMContentLoaded', () => {
     //Keep the theme the same
     if (sessionStorage.getItem("theme") === "dark") {
@@ -93,7 +130,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
-
+document.getElementById('search_button').addEventListener('click', async () => {
+    await search_hide();
+    await search();
+    await search_show();
+});
 const follower = document.getElementById('eye');
 
 document.addEventListener('mousemove', (event) => {

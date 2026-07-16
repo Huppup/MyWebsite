@@ -21,21 +21,21 @@
 
         <div class="section_button home_page"
                onclick="document.getElementById('item2').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})">
-            <i class="fa-solid fa-circle-info"></i>
-        </div>
-        <p class="section_text">Website Info</p>
-
-        <div class="section_button home_page"
-               onclick="document.getElementById('item3').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})">
             <i class="fa-solid fa-microchip" ></i>
         </div>
         <p class="section_text">Tech Stack</p>
 
         <div class="section_button home_page"
-               onclick="document.getElementById('item4').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})">
+               onclick="document.getElementById('item3').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})">
             <i class="fa-solid fa-file-lines" ></i>
         </div>
         <p class="section_text">Resume</p>
+
+        <div class="section_button home_page"
+               onclick="document.getElementById('item4').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})">
+            <i class="fa-solid fa-circle-info"></i>
+        </div>
+        <p class="section_text">Website Info</p>
     </nav>
 
     <nav id="sidebar_right">
@@ -73,19 +73,8 @@
 
 
 
-        <div id="item2" class="item home_page">
-            <span>
-                <h1 class="title text home_page right_align">Info</h1>
-                <p class="text right_align">I know this website can look a little confusing, but don't worry, I'm on your side! It's time to shine some light on your questions.</p>
-                <h1 class="title text home_page right_align" onclick="toggle_mode()">Theme</h1>
-                <p class="text right_align">The white button in the top right changes theme. Click it to go to light theme, again for dark.</p>
-                <h1 class="title text home_page right_align">Sections</h1>
-                <p class="text right_align">The buttons (icons) on the left change sections, while the buttons on the right change pages. You're ready to use the website!</p>
-            </span>
-            <img class="image home_page" src="img/info_website.gif" alt="Webpage">
-        </div>
 
-        <div id="item3" class="item home_page">
+        <div id="item2" class="item home_page">
             <img class="image home_page" src="img/computer.png" alt="Michael Philipov">
             <span>
                 <h1 class="title text home_page">Tech Stack</h1>
@@ -114,7 +103,7 @@
             </span>
         </div>
 
-        <div id="item4" class="item home_page">
+        <div id="item3" class="item home_page">
             <a href="docs/Michael_Philipov_Resume.pdf" target="_blank">
             <img class="image home_page" src="img/Michael_Philipov_Resume.png" alt="Resume">
             </a>
@@ -123,6 +112,17 @@
             </span>
         </div>
 
+        <div id="item4" class="item home_page">
+            <span>
+                <h1 class="title text home_page right_align">Info</h1>
+                <p class="text right_align">I know this website can look a little confusing, but don't worry, I'm on your side! It's time to shine some light on your questions.</p>
+                <h1 class="title text home_page right_align" onclick="toggle_mode()">Theme</h1>
+                <p class="text right_align">The white button in the top right changes theme. Click it to go to light theme, again for dark.</p>
+                <h1 class="title text home_page right_align">Sections</h1>
+                <p class="text right_align">The buttons (icons) on the left change sections, while the buttons on the right change pages. You're ready to use the website!</p>
+            </span>
+            <img class="image home_page" src="img/info_website.gif" alt="Webpage">
+        </div>
 
     </body>
 
@@ -136,8 +136,28 @@
     </div>
     <div id="eye" class="home_page"></div>
     <div id="search_pop">
-        <h1 class="title home_page">Search</h1>
-        <input  type="text" placeholder="Search...">
+        <h1 id="search_button" class="title home_page search_title" 
+                >Search</h1>
+        <input id="search_input" class="search_title home_page" type="text" placeholder="Search...">
+        <ul id="search_list" class="home_page">
+            <li><a href="main.html" class="search_item home_page">Home</a></li>
+            <li><a href="swim.html" class="search_item home_page">Swimming</a></li>
+            <li><a href="projects.html" class="search_item home_page">Projects</a></li>
+            <li><a href="hobby.html" class="search_item home_page">Hobbies</a></li>
+            <li><a href="main.html#item2" class="search_item home_page" onclick="setTimeout(() => { location.reload(); }, 1000); ">Tech Stack [Home]</a></li>
+            <li><a href="main.html#item3" class="search_item home_page" onclick="setTimeout(() => { location.reload(); }, 1000); ">Resume [Home]</a></li>
+            <li><a href="main.html#item4" class="search_item home_page" onclick="setTimeout(() => { location.reload(); }, 1000);">Website Information [Home]</a></li>
+            <li><a href="swim.html#item2" class="search_item home_page">Times [Swimming]</a></li>
+            <li><a href="swim.html#item3" class="search_item home_page">History [Swimming]</a></li>
+            <li><a href="projects.html#item1" class="search_item home_page">None</a></li>
+            <li><a href="projects.html#item2" class="search_item home_page">None</a></li>
+            <li><a href="projects.html#item3" class="search_item home_page">None</a></li>
+            <li><a href="projects.html#item4" class="search_item home_page">None</a></li>
+            <li><a href="none.html#item1" class="search_item home_page">None</a></li>
+            <li><a href="none.html#item2" class="search_item home_page">None</a></li>
+            <li><a href="none.html#item3" class="search_item home_page">None</a></li>
+            <li><a href="none.html#item4" class="search_item home_page">None</a></li>
+        </ul>
     </div>
     <div id="pop_fade" onclick="search_close()"></div>
 
